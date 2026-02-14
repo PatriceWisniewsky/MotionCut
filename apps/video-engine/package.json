@@ -1,0 +1,28 @@
+{
+  "name": "@motioncut/video-engine",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/exports.ts",
+  "types": "./src/exports.ts",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@motioncut/video-types": "workspace:*",
+    "@remotion/cli": "4.0.422",
+    "@remotion/player": "4.0.422",
+    "@remotion/renderer": "4.0.422",
+    "react": "^19",
+    "react-dom": "^19",
+    "remotion": "4.0.422",
+    "zod": "^3.23"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5.5"
+  }
+}

@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+
+# Remotion
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Turbo
+.turbo/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Rendered videos (local)
+apps/dashboard/public/renders/
+
+# Claude Code
+.claude/
+
+# Debug
+npm-debug.log*
+pnpm-debug.log*
+
+# Windows artifacts
+nul
