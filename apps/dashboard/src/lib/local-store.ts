@@ -239,7 +239,10 @@ export function createLocalClient() {
 }
 
 // ---------- Check ob wir lokal laufen ----------
+// Lokaler Modus nur wenn explizit der Platzhalter in der Env-Variable steht
+// (d.h. der User hat noch keine echten Supabase-Credentials eingetragen)
 export function isLocalMode(): boolean {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  return !url || url.includes("YOUR_PROJECT_ID") || url === "";
+  // Nur lokal wenn die env-Variable den Platzhalter enthält oder komplett fehlt
+  return !url || url.includes("YOUR_PROJECT_ID");
 }

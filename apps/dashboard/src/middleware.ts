@@ -4,7 +4,7 @@ import { updateSession } from "@/lib/supabase/middleware";
 export async function middleware(request: NextRequest) {
   // Im lokalen Modus: keine Auth-Checks, alles durchlassen
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const isLocal = !supabaseUrl || supabaseUrl.includes("YOUR_PROJECT_ID") || supabaseUrl === "";
+  const isLocal = !supabaseUrl || supabaseUrl.includes("YOUR_PROJECT_ID");
 
   if (isLocal) {
     return NextResponse.next();
